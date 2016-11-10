@@ -28,7 +28,7 @@ def setsecuritylevel(seclevel=0):
     if seclevel == 1:
         s = requests.Session()
         s.get("%s/index.php" % config['url'])
-        s.get("%s/index.php?do=toggle-security" % config['url'])
+        s.get("%s/index.php?do=toggle-security" % config['url'], allow_redirects=False)
         return s
     if seclevel == 5:
         s = requests.Session()
@@ -38,9 +38,10 @@ def setsecuritylevel(seclevel=0):
         return s
 
 
-# This function returns the python request object so that the cookies can be used for future requests
-def auth(user, pwd):
-    s = requests.Session()
+# This function returns the python session so that the cookies can be used for future requests
+def auth(user, pwd, s=None):
+    if s is None:
+        s = requests.Session()
     data = "username=%s&password=%s&login-php-submit-button=Login" % (user, pwd)
     headers = {'Content-Type': 'application/x-www-form-urlencoded'}
     s.post("%s/index.php?page=login.php" % config['url'], data, headers=headers)
