@@ -13,7 +13,7 @@ def test_uid_cookie_manipulation():
     r = s.get(url)
     actual_user = (r.headers["Logged-In-User"])
 
-    s.cookies.set('uid', '1', domain="192.168.10.105", path="/mutillidae")
+    s.cookies.set('uid', '1', domain=config["domain"], path=config["path"])
     r = s.get(url)
 
     assert actual_user == r.headers["Logged-In-User"]

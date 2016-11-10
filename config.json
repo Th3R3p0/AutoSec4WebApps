@@ -3,5 +3,7 @@
   "validuser": "a",
   "validpass": "a",
   "invaliduser": "invaliduser",
+  "domain" : "192.168.10.105",
+  "path" : "/mutillidae",
   "seclevel": 5
 }
