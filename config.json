@@ -1,0 +1,7 @@
+{
+  "url" : "http://192.168.10.105/mutillidae",
+  "validuser": "a",
+  "validpass": "a",
+  "invaliduser": "invaliduser",
+  "seclevel": 5
+}
