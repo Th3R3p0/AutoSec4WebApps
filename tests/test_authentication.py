@@ -12,7 +12,6 @@ def test_uid_cookie_manipulation():
     url = "%s/index.php" % config['url']
     r = s.get(url)
     actual_user = (r.headers["Logged-In-User"])
-
     s.cookies.set('uid', '1', domain=config["domain"], path=config["path"])
     r = s.get(url)
 

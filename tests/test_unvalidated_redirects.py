@@ -14,4 +14,3 @@ def test_unvalidated_redirect():
     redirect = re.compile(r"%s" % redirect_url)
     assert redirect.search(r.text) is None
 
-test_unvalidated_redirect()

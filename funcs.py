@@ -10,14 +10,6 @@ def loadconfig():
 
 config = loadconfig()
 
-# Todo: remove the proxy before making code live
-# http_proxy  = "http://127.0.0.1:9696"
-# https_proxy = "https://10.10.1.11:9696"
-# proxyDict = {
-#               "http"  : http_proxy,
-#               "https" : https_proxy
-#             }
-
 
 # This function only exists for DVWA. This would not be needed in a real world application
 # This function returns a session with a security level - security levels are mapped to a jsessionid
