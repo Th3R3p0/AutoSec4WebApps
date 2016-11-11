@@ -1,6 +1,5 @@
 from funcs import setsecuritylevel, loadconfig
 from bs4 import BeautifulSoup
-import re
 
 config = loadconfig()
 
