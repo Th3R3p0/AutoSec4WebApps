@@ -2,7 +2,8 @@ from funcs import setsecuritylevel, loadconfig
 
 config = loadconfig()
 
-
+# this is a best practice check. this can be used out of the box with any URL.
+# this check is assuming that the http requests should ALWAYS redirect to https
 def test_http_to_https():
     s = setsecuritylevel(seclevel=config['seclevel'])
 
@@ -15,7 +16,7 @@ def test_http_to_https():
     else:
         raise NameError("URL is not valid - must start with http:// or http://")
 
-    r = s.get(url, allow_redirects=False)
+    r = s.get(insecure_url, allow_redirects=False)
     # make sure a redirection occurs
     print(r.status_code)
     assert r.status_code == 301 or r.status_code == 302
@@ -26,5 +27,3 @@ def test_http_to_https():
             assert https_redirect is True
         else:
             raise NameError("Redirect location did not appear in the headers")
-
-
