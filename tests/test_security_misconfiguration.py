@@ -3,20 +3,6 @@ from bs4 import BeautifulSoup
 
 config = loadconfig()
 
-# def parseurl(url):
-#     parsed = urlparse(url)
-#     query = parse_qs(parsed.query)
-# #     paramsandkeys = urlparse.parse.parse_qs(parsed.query)
-# #     # return paramsandkeys
-# #     print(type(parsed))
-#
-# # o = urlparse('http://google.com/a?key=value')
-# # print(o)
-
-# parseurl('http://google.com/a?key=value')
-
-
-# Need to see if the form action is a post or get
 
 def test_post_vs_get_form():
     s = setsecuritylevel(seclevel=config['seclevel'])
