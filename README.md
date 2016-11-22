@@ -3,6 +3,7 @@
 This repository contains some sample pytest scripts to run against a Mutillidae 1 web server. You can use these scripts to become familiar with the pytest framework and help you visualize some different ways to test for vulnerabilities which you may have found in your application in the past. 
 
 To use: 
+
 1. git clone https://github.com/Th3R3p0/AutoSec4WebApps.git
 2. download and run Metasploitable which contains Mutillidae 1 - https://sourceforge.net/projects/metasploitable/
 3. modify config.json file to include the correct URL, domain and path of your Mutillidae web server
