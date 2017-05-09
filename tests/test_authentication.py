@@ -12,7 +12,7 @@ def test_uid_cookie_manipulation():
     url = "%s/index.php" % config['url']
     r = s.get(url)
     actual_user = (r.headers["Logged-In-User"])
-    s.cookies.set('uid', '1', domain=config["domain"], path=config["path"])
+    s.cookies.set('uid', '1', domain=config["domain"].encode('utf-8'), path=config["path"].encode('utf-8'))
     r = s.get(url)
 
     assert actual_user == r.headers["Logged-In-User"]

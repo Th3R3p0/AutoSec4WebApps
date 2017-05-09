@@ -4,14 +4,14 @@ import json
 
 # Todo: look into the open config file location
 def loadconfig():
-    with open('../config.json') as json_data_file:
+    with open('config.json') as json_data_file:
         config = json.load(json_data_file)
     return config
 
 config = loadconfig()
 
 
-# This function only exists for DVWA. This would not be needed in a real world application
+# This function only exists for Mutillidae. This would not be needed in a real world application
 # This function returns a session with a security level - security levels are mapped to a jsessionid
 def setsecuritylevel(seclevel=0):
     if seclevel == 0:
